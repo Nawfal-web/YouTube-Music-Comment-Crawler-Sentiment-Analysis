@@ -1,12 +1,12 @@
 YouTube Music Comment Crawler & Sentiment Analysis System
 
-Overview
+Overview:
 
 A Python-based system for collecting YouTube comments and performing sentiment analysis to understand viewers' opinions and reactions to music content.
 
 The system supports both online comment collection and offline analysis using uploaded CSV files. It also provides a web interface for uploading datasets and viewing analysis results.
 
-Key Features
+Key Features:
 
 YouTube comment crawling and data collection
 
@@ -20,7 +20,7 @@ Word cloud generation
 
 Flask-based web interface
 
-Technologies
+Technologies:
 
 Python
 
@@ -36,7 +36,7 @@ WordCloud
 
 youtube-comment-downloader
 
-Main Components
+Main Components:
 
 Comment collection
 
@@ -47,3 +47,7 @@ Sentiment analysis
 Data visualization
 
 Web-based result presentation
+
+Project Purpose:
+
+The project demonstrates the application of web crawling, natural language processing, sentiment analysis, and data visualization to extract insights from user-generated content.
