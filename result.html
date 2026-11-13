@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        body {
+            font-family: "Segoe UI";
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📊 Analysis Results</h1>
+
+<div class="card">
+    <h2>Sentiment Summary</h2>
+    <p>{{ summary }}</p>
+</div>
+
+<div class="card">
+    <h2>Word Cloud</h2>
+    <img src="/static/wordcloud.png">
+</div>
+
+<div class="card">
+    <h2>Sentiment Chart</h2>
+    <img src="/static/sentiment.png">
+</div>
+
+<div class="card">
+    <h2>Top Words</h2>
+    <ul>
+        {% for word, count in top_words %}
+            <li>{{ word }} ({{ count }})</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Insight</h2>
+    <p>{{ explanation }}</p>
+</div>
+
+<a href="/" class="btn">⬅ Back</a>
+
+</body>
+</html>

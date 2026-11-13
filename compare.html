@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📊 Comparison Result</h1>
+
+<div class="card">
+    <h2>Song 1</h2>
+    <p>{{ s1 }}</p>
+</div>
+
+<div class="card">
+    <h2>Song 2</h2>
+    <p>{{ s2 }}</p>
+</div>
+
+<div class="card">
+    <h2>Insight</h2>
+    {% if s1['Positive'] > s2['Positive'] %}
+        <p>Song 1 is more positively received</p>
+    {% elif s1['Positive'] < s2['Positive'] %}
+        <p>Song 2 is more positively received</p>
+    {% else %}
+        <p>Both songs have similar reception</p>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h2>Comparison Chart</h2>
+    <img src="/static/comparison.png">
+</div>
+
+<a href="/">⬅ Back</a>
+
+</body>
+</html>

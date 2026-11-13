@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Analyzer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            padding: 30px;
+            margin: 20px auto;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎵 Music Analyzer</h1>
+
+    <div class="card">
+        <h3>Analyze One Song</h3>
+        <form method="post">
+            <input type="text" name="song" placeholder="Paste YouTube link">
+            <br>
+            <button name="action" value="single">Analyze</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Compare Two Songs</h3>
+        <form method="post">
+            <input type="text" name="song1" placeholder="First song"><br><br>
+            <input type="text" name="song2" placeholder="Second song"><br>
+            <button name="action" value="compare">Compare</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
